@@ -14,23 +14,6 @@
 	>
 		<input type="text" name="newTodoText" class="bg-transparent flex-1" />
 		<button
-			type="submit"
-			class="
-				bg-gradient-to-br
-				from-purple-500
-				to-indigo-600
-				transition-transform
-				transform
-				hover:scale-105
-				text-white
-				px-4
-				py-2
-				rounded-xl
-			"
-		>
-			Add
-		</button>
-		<button
 			type="button"
 			class="
 				bg-gradient-to-br
@@ -46,6 +29,23 @@
 			"
 		>
 			Cancel
+		</button>
+		<button
+			type="submit"
+			class="
+				bg-gradient-to-br
+				from-purple-500
+				to-indigo-600
+				transition-transform
+				transform
+				hover:scale-105
+				text-white
+				px-4
+				py-2
+				rounded-xl
+			"
+		>
+			Add
 		</button>
 	</form>
 </template>
