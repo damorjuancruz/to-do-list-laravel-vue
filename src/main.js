@@ -7,19 +7,13 @@ import "./index.css";
 const store = createStore({
 	state() {
 		return {
+			showAddNew: false,
 			todos: [],
 		};
 	},
 	mutations: {
-		add(state) {
-			state.todos = [
-				...state.todos,
-				{
-					id: Math.floor(Math.random() * 100000),
-					text: "hola",
-					done: false,
-				},
-			];
+		add(state, todo) {
+			state.todos = [...state.todos, todo];
 		},
 		toggleDone(state, id) {
 			state.todos = state.todos.map((todo) =>
