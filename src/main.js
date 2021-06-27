@@ -8,6 +8,7 @@ const store = createStore({
 	state() {
 		return {
 			showNewTodo: false,
+			editing: -1,
 			todos: [],
 		};
 	},
@@ -24,6 +25,19 @@ const store = createStore({
 					? {
 							...todo,
 							done: !todo.done,
+					  }
+					: todo
+			);
+		},
+		setEditing(state, id) {
+			state.editing = id;
+		},
+		editText(state, { id, text }) {
+			state.todos = state.todos.map((todo) =>
+				todo.id === id
+					? {
+							...todo,
+							text,
 					  }
 					: todo
 			);

@@ -1,7 +1,7 @@
 <template>
 	<div
 		v-if="$store.state.todos.length"
-		class="mx-4 py-2 overflow-hidden shadow-md rounded-2xl bg-gray-50"
+		class="mx-4 py-2 overflow-hidden shadow-md rounded-lg bg-gray-50"
 	>
 		<Todo v-for="todo in $store.state.todos" :key="todo.id" :data="todo" />
 	</div>

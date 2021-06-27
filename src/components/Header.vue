@@ -6,7 +6,7 @@
 			py-2
 			overflow-hidden
 			shadow-md
-			rounded-2xl
+			rounded-lg
 			flex
 			items-center
 			justify-between
@@ -18,7 +18,7 @@
 			@click="toggleNewTodo"
 			:class="`bg-gradient-to-br from-purple-500 to-indigo-600 transition-transform transform ${
 				$store.state.showNewTodo ? 'translate-x-20' : ''
-			} hover:scale-105 text-white px-4 py-2 rounded-xl`"
+			} hover:scale-105 text-white px-4 py-2 rounded-lg`"
 		>
 			New
 		</button>
