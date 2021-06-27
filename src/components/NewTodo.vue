@@ -2,17 +2,9 @@
 	<form
 		@submit="add"
 		autocomplete="off"
-		class="
-			mx-4
-			px-4
-			py-2
-			shadow-md
-			rounded-2xl
-			flex
-			items-center
-			gap-2
-			bg-gray-50
-		"
+		:class="`mx-4 px-4 shadow-md rounded-2xl flex items-center gap-2 bg-gray-50 transition-all overflow-hidden ${
+			$store.state.showNewTodo ? 'max-h-20 py-2' : 'max-h-0 -my-2'
+		}`"
 	>
 		<input
 			type="text"
@@ -22,6 +14,7 @@
 		/>
 		<button
 			type="button"
+			@click="toggleNewTodo"
 			class="
 				bg-gradient-to-br
 				from-pink-500
@@ -68,6 +61,9 @@ export default {
 		};
 	},
 	methods: {
+		toggleNewTodo() {
+			this.$store.commit("toggleShowNewTodo");
+		},
 		add(e) {
 			e.preventDefault();
 			if (!this.text) return;

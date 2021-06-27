@@ -7,11 +7,14 @@ import "./index.css";
 const store = createStore({
 	state() {
 		return {
-			showAddNew: false,
+			showNewTodo: false,
 			todos: [],
 		};
 	},
 	mutations: {
+		toggleShowNewTodo(state) {
+			state.showNewTodo = !state.showNewTodo;
+		},
 		add(state, todo) {
 			state.todos = [...state.todos, todo];
 		},
