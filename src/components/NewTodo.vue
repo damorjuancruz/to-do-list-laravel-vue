@@ -1,1 +1,51 @@
-<template></template>
+<template>
+	<form
+		class="
+			mx-4
+			px-4
+			py-2
+			shadow-md
+			rounded-2xl
+			flex
+			items-center
+			gap-2
+			bg-gray-50
+		"
+	>
+		<input type="text" name="newTodoText" class="bg-transparent flex-1" />
+		<button
+			type="submit"
+			class="
+				bg-gradient-to-br
+				from-purple-500
+				to-indigo-600
+				transition-transform
+				transform
+				hover:scale-105
+				text-white
+				px-4
+				py-2
+				rounded-xl
+			"
+		>
+			Add
+		</button>
+		<button
+			type="button"
+			class="
+				bg-gradient-to-br
+				from-red-500
+				to-pink-500
+				transition-transform
+				transform
+				hover:scale-105
+				text-white
+				px-4
+				py-2
+				rounded-xl
+			"
+		>
+			Cancel
+		</button>
+	</form>
+</template>
