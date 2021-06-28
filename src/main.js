@@ -42,6 +42,9 @@ const store = createStore({
 					: todo
 			);
 		},
+		remove(state, id) {
+			state.todos = state.todos.filter((todo) => todo.id !== id);
+		},
 	},
 });
 

@@ -16,8 +16,8 @@
 		<h1 class="text-xl">To-Do List</h1>
 		<button
 			@click="toggleNewTodo"
-			:class="`bg-gradient-to-br from-purple-500 to-indigo-600 transition-transform transform ${
-				$store.state.showNewTodo ? 'translate-x-20' : ''
+			:class="`bg-gradient-to-br from-purple-600 to-blue-600 transition-transform transform ${
+				$store.state.showNewTodo ? 'translate-x-24 scale-105' : ''
 			} hover:scale-105 text-white px-4 py-2 rounded-lg`"
 		>
 			New
