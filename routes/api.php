@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\TodosAPIController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/todos', [TodosAPIController::class, 'index']);
+Route::post('/todos', [TodosAPIController::class, 'new']);
+Route::put('/todos/{todo}', [TodosAPIController::class, 'edit']);
+// Route::put('/todos/{id}', [TodosAPIController::class, 'edit']);
+Route::delete('/todos/{todo}', [TodosAPIController::class, 'delete']);

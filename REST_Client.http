@@ -1,0 +1,30 @@
+GET http://localhost:8000/api/todos
+###
+
+POST http://localhost:8000/api/todos
+Content-Type: application/json
+
+{
+	"text": "final test 3",
+	"done": false
+}
+###
+
+PUT http://localhost:8000/api/todos/8
+Content-Type: application/json
+
+{
+	"text": "updated test 1"
+}
+###
+
+PUT http://localhost:8000/api/todos/9
+Content-Type: application/json
+
+{
+	"done": false
+}
+###
+
+DELETE  http://localhost:8000/api/todos/10
+###
