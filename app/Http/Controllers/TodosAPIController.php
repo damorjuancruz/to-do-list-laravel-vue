@@ -28,13 +28,11 @@ class TodosAPIController extends Controller
 	public function edit (Todo $todo) {
 		$text = request('text') !== null ? request('text') : $todo->text;
 		$done = request('done') !== null ? request('done') : $todo->done;
-		$success = $todo->update([
+		$todo->update([
 			'text' => $text,
 			'done' => $done,
 		]);
-		return [
-			'success' => $success
-		];
+		return $todo;
 	}
 	public function delete (Todo $todo){
 		$success =  $todo -> delete();

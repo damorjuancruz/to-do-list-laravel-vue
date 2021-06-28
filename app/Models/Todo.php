@@ -9,6 +9,7 @@ class Todo extends Model
 {
     use HasFactory;
 
+	public $timestamps = false;
 	protected $fillable = [
 		'text', 'done'
 	];
