@@ -4,11 +4,6 @@ export default {
         state.showNewTodo = !state.showNewTodo;
     },
 
-    // editing
-    setEditing(state, id) {
-        state.editing = id;
-    },
-
     // todos
     add(state, todo) {
         state.todos = [...state.todos, todo];

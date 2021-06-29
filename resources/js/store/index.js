@@ -5,7 +5,6 @@ export default createStore({
     state() {
         return {
             showNewTodo: false,
-            editing: -1,
             todos: [],
         };
     },
